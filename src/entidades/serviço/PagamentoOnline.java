@@ -2,11 +2,7 @@ package entidades.serviço;
 
 public interface PagamentoOnline {
 
-	private Double taxaPagamento(Double valor) {
-		return null;
-	}
+	double taxaPagamento(Double valor);
 
-	private Double interesse(Double valor, Integer meses) {
-		return null;
-	}
+	double juros(Double valor, Integer meses);
 }

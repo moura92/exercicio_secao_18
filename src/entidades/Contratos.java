@@ -1,23 +1,24 @@
 package entidades;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Contratos {
 
 	private Integer numero;
-	private Date data;
+	private LocalDate data;
+	private Double valorTotal;
 
-	private List<Prestação> prestação = new ArrayList<>();
+	private List<Parcela> parcelas = new ArrayList<>();
 
 	public Contratos() {
 	}
 
-	public Contratos(Integer numero, Date data, List<Prestação> prestação) {
+	public Contratos(Integer numero, LocalDate data, Double valorTotal) {
 		this.numero = numero;
 		this.data = data;
-		this.prestação = prestação;
+		this.valorTotal = valorTotal;
 	}
 
 	public Integer getNumero() {
@@ -28,23 +29,24 @@ public class Contratos {
 		this.numero = numero;
 	}
 
-	public Date getData() {
+	public LocalDate getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void setData(LocalDate data) {
 		this.data = data;
 	}
 
-	public List<Prestação> getPrestação() {
-		return prestação;
+	public Double getValorTotal() {
+		return valorTotal;
 	}
 
-	public void setPrestação(List<Prestação> prestação) {
-		this.prestação = prestação;
+	public void setValorTotal(Double valorTotal) {
+		this.valorTotal = valorTotal;
 	}
 
-	public Double valorTotal() {
-		return null;
+	public List<Parcela> getParcelas() {
+		return parcelas;
 	}
+
 }

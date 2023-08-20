@@ -2,11 +2,11 @@ package entidades.serviço;
 
 public class Paypal implements PagamentoOnline {
 
-	private Double taxaPagamento(Double valor) {
-		return null;
+	public double taxaPagamento(Double valor) {
+		return valor * 0.02;
 	}
 
-	private Double interesse(Double valor, Integer meses) {
-		return null;
+	public double juros(Double valor, Integer meses) {
+		return valor * 0.01 * meses;
 	}
 }
